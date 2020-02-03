@@ -8,15 +8,19 @@
             // Function body
 
             // 1a. We'll double the age and console.log it
-            console.log(+age * 2);
+            const doubledAge = +age * 2;
+            return doubledAge;
         };
 
         const clicked = () => {
-            // 1. Use Prompt
+            // 1. Use Prompt/user input
             const userAge = prompt("What is your age?");
 
             // Call/Invoke the function
-            doubleAge(userAge);
+            const userAgeDoubled = doubleAge(userAge);
+
+            // Print the return value
+            document.getElementById("age").innerHTML = userAgeDoubled;
 
             // 2. Save Input to array            
         }
@@ -34,8 +38,10 @@
     <button onclick="clicked()">ClickME</button>
     <!-- Change buttonClicked to use prompt -->
     <!-- 5. Create a div for the array contents-->
+    <h2>Age:
+        <div id="age"></div>
+    </h2>
+
     <!-- 6. Create a button to update div with current array contents-->
 
-</body>
-
-</html>
+</body </html>
