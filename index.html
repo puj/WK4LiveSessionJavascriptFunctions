@@ -12,21 +12,35 @@
             return doubledAge;
         };
 
+        const tripleAge = (age) => {
+            // Function body
+            const tripledAge = +age * 3;
+            return tripledAge;
+        }
+
         const clicked = () => {
             // 1. Use Prompt/user input
             const userAge = prompt("What is your age?");
 
-            // Call/Invoke the function
-            const userAgeDoubled = doubleAge(userAge);
+            // Check if it is odd or even
+
+            // Initialize the variable to the original age
+            let modifiedAged = userAge;
+            console.log(`Original Age: ${userAge}`);
+
+            if (+userAge % 2 == 0) {
+                // a. If even, double the original age
+                modifiedAged = doubleAge(userAge);
+            } else {
+                // b. If odd, triple the age
+                modifiedAged = tripleAge(userAge);
+            }
+            console.log(`Modified Age: ${modifiedAged}`);
 
             // Print the return value
-            document.getElementById("age").innerHTML = userAgeDoubled;
+            document.getElementById("age").innerHTML = modifiedAged;
 
-            // 2. Save Input to array            
         }
-
-        // 3. Create a function to print/alert the current array
-        // 4. Create a function to process the array contents
     </script>
 
 
