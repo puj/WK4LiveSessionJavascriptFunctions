@@ -3,9 +3,11 @@
 
 <head>
     <script>
-        const buttonClicked = () => {
-            alert("Good Morning");
+        const clicked = () => {
             // 1. Use Prompt
+            const returnValue = prompt("What is your age?");
+            console.log(returnValue);
+            // 1a. We'll double the age and console.log it
             // 2. Save Input to array            
         }
 
@@ -18,7 +20,7 @@
 
 <body>
     <h1>Week 4 Live Stream</h1>
-    <button onclick="buttonClicked()">ClickME</button>
+    <button onclick="clicked()">ClickME</button>
     <!-- Change buttonClicked to use prompt -->
     <!-- 5. Create a div for the array contents-->
     <!-- 6. Create a button to update div with current array contents-->
