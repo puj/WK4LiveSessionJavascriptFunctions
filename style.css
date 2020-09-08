@@ -1,0 +1,12 @@
+html,
+input,
+button {
+  font-size: 25px;
+}
+
+.answer {
+  width: 200px;
+  font-size: 22px;
+  display: flex;
+  justify-content: space-evenly;
+}

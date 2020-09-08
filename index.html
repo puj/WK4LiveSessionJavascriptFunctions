@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <script src="script.js"></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <h1>Week 4 Live Stream</h1>
-    <button onclick="clicked()">ClickME</button>
-    <!-- Change buttonClicked to use prompt -->
-    <!-- 5. Create a div for the array contents-->
-    <h2>Age:
-        <div id="age"></div>
-    </h2>
+  <body>
+    <h1>Javascript Functions & Forms</h1>
+    <button onclick="askAge()">Ask Age</button>
 
-    <!-- 6. Create a button to update div with current array contents-->
+    <form onsubmit="handleSubmit(event)">
+      <label for="age">Age: </label>
+      <input id="age" name="age" type="number" />
+      <input id="submit" name="submit" type="submit" value="Submit" />
+    </form>
 
-</body>
-
+    <div class="answer">
+      <p>Age x 2 =</p>
+      <p id="doubledAge"></p>
+    </div>
+    <div class="answer">
+      <p>Age x 3 =</p>
+      <p id="tripledAge"></p>
+    </div>
+  </body>
 </html>
