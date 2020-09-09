@@ -1,24 +1,36 @@
-const askAge = () => {
-  const age = prompt("What is your age?");
-  console.log(age);
-  console.log(age * 2);
-};
+// Executing a function == invoking == calling
 
 const doubleAge = (age) => {
-  const doubledAge = age * 2;
-  return doubledAge;
+  return age * 2;
 };
 
 const tripleAge = (age) => {
-  const tripledAge = age * 3;
-  return tripledAge;
+  return age * 3;
 };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  const age = document.getElementById("age").value;
+// Input : accepts an age number value
+// Output: returns true/false
+const isAgeOdd = (age) => {
+  if (age % 2 === 0) {
+    // Even
+    return false;
+  } else {
+    // Odd
+    return true;
+  }
+};
 
-  // Print the return value
-  document.getElementById("doubledAge").innerHTML = doubleAge(age);
-  document.getElementById("tripledAge").innerHTML = tripleAge(age);
+const handleSubmit = (event) => {
+  // This prevent page reload
+  event.preventDefault();
+
+  // Get the age value from the form input
+  const age = document.getElementById('age').value;
+
+  // Do the age calculations
+  const doubledAge = doubleAge(age);
+  const tripledAge = tripleAge(age);
+
+  document.getElementById('doubleAge').innerHTML = doubledAge;
+  document.getElementById('tripleAge').innerHTML = tripledAge;
 };
